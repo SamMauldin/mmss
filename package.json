@@ -1,0 +1,29 @@
+{
+	"name": "mmss",
+	"version": "0.0.1",
+	"author": "MMSS Team",
+	"contributors": [
+		{
+			"name": "Sxw1212"
+		},
+		{
+			"name": "Human"
+		}
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Sxw1212/mmss.git"
+	},
+	"keywords": [
+		"minecraft",
+		"server"
+	],
+	"dependencies" : {
+		"colors": "*",
+		"minecraft-protocol": "0.11.3"
+	},
+	"license": "MIT",
+	"engines": {
+		"node": ">=0.10"
+	}
+}
