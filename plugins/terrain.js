@@ -1,11 +1,10 @@
-var chunk = require("../lib/world/chunk").build();
-var zlib = require("zlib");
-var cdata;
-zlib.deflate(chunk, function(err, res) {
+function dataCallback(err, res) {
 	if (err) { throw err; }
-	cdata = res
-	console.log("done")
-});
+	cdata = res;
+}
+
+var cdata;
+var chunk = require("../lib/world/chunk").build().getCompressedData(dataCallback);
 
 module.exports = function(server) {
 	server.on("client_preconnect2", function(client) {
