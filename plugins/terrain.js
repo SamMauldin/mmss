@@ -4,9 +4,12 @@ function dataCallback(err, res) {
 }
 
 var cdata;
-var chunk = require("../lib/world/chunk").build().getCompressedData(dataCallback);
+var chunk = require("../lib/world/chunk").build();
 
 module.exports = function(server) {
+	chunk.generate(server);
+	chunk.getCompressedData(dataCallback);
+	
 	server.on("client_preconnect2", function(client) {
 		if (cdata) {
 			for (var x = 0; x < 14; x++) {
