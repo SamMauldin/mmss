@@ -17,3 +17,4 @@ require("./plugins/bedrockgen")(server);
 
 require("./plugins/chat")(server);
 require("./plugins/terrain")(server);
+require("./plugins/time")(server);
