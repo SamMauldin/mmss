@@ -3,8 +3,8 @@ function flatgen(chunk) {
 	for (var x = 0; x < 16; x++) {
 		for (var z = 0; z < 16; z++) {
 			for (var y = 0; y < 21; y++) {
-				var block = y == 20 ? 2 : 3
-				chunk.setBlock(x, y, z, block)
+				var block = y == 20 ? 2 : 3;
+				chunk.setBlock(x, y, z, block);
 			}
 		}
 	}
@@ -13,4 +13,4 @@ function flatgen(chunk) {
 module.exports = function(server) {
 	server.generators = server.generators || [];
 	server.generators.push(flatgen);
-}
+};

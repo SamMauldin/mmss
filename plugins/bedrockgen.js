@@ -14,4 +14,4 @@ function bedrockgen(chunk) {
 module.exports = function(server) {
 	server.generators = server.generators || [];
 	server.generators.push(bedrockgen);
-}
+};

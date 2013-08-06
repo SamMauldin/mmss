@@ -5,4 +5,4 @@ module.exports = function(server) {
 			time: [1, 0]
 		});
 	});
-}
+};
