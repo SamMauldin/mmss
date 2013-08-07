@@ -1,5 +1,6 @@
 var server = require("./lib/core/core").createServer({
-	gamemode: 1
+	"gamemode": 1,
+	"online-mode": false
 });
 
 // Plugin loading sequence
@@ -14,6 +15,8 @@ require("./lib/core/utils")(server);
 
 require("./plugins/flatgen")(server);
 require("./plugins/bedrockgen")(server);
+
+require("./plugins/movement")(server);
 
 require("./plugins/chat")(server);
 require("./plugins/terrain")(server);

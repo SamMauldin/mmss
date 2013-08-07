@@ -7,14 +7,16 @@ module.exports = function(server) {
 			chunks[x] = chunks[x] || []
 			for (var z = 0; z < 14; z++) {
 				var cdata;
-				if (!chunks[x][y]) {
-					chunks[x][y] = chunk.build(x-7, z-7);
-					chunks[x][y].generate(server);
+				if (!chunks[x][z]) {
+					chunks[x][z] = chunk.build(x-7, z-7);
+					chunks[x][z].generate(server);
 				}
-				cdata = chunks[x][y];
+				cdata = chunks[x][z];
 				cdata.send(client);
 			}
 		}
 	});
-	server.on("packet_
+	server.on("player_move", function(client) {
+		
+	});
 };
