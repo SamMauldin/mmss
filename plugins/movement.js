@@ -34,12 +34,13 @@ module.exports = function(server) {
 		client.on(0x0b, function(data) {
 			for (var cid in server.clients) {
 				if (server.clients[cid] != client) {
-					console.log(Math.round(client.pos.x-data.x));
-					server.clients[cid].write(0x1f, {
+					server.clients[cid].write(0x22, {
 						entityId: client.id,
-						dx: Math.round(client.pos.x-data.x),
-						dy: Math.round(client.pos.y-data.y),
-						dz: Math.round(client.pos.z-data.z)
+						z: client.x,
+						y: client.y,
+						z: client.z,
+						yaw: client.yaw,
+						pitch: client.pitch
 					});
 				}
 			}
